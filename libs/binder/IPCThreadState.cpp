@@ -371,6 +371,10 @@ int IPCThreadState::getCallingPid() const
     return mCallingPid;
 }
 
+extern "C" int _ZN7android14IPCThreadState13getCallingUidEv(IPCThreadState *state) {
+    return state->getCallingUid();
+}
+
 int IPCThreadState::getCallingUid() const
 {
     return mCallingUid;
